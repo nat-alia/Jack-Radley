@@ -1,0 +1,118 @@
+:root {
+  --info-color: #F1EFF4;
+  --writing-color: #2B6AC0;
+  --curating-color: #242021;
+  --studio-color:#FBFBEF;
+
+  --white-sub: #FBFBEF;
+  --black-sub: #242021;
+}
+
+
+@font-face {
+  font-family: "serif";
+  src: url('fonts/Minipax/Minipax-Regular.eot'), /* IE9 Compat Modes */
+       url('fonts/Minipax/Minipax-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/Minipax/Minipax-Regular.woff') format('woff'); /* Pretty Modern Browsers */
+}
+
+@font-face {
+  font-family: "sans";
+  src: url('fonts/Authentic/AUTHENTICSans-130.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/Authentic/AUTHENTICSans-130.woff') format('woff'); /* Pretty Modern Browsers */
+}
+
+i{
+  font-family: freight-text-pro, serif;
+  font-weight: 400;
+  font-size: 48px;
+  font-style: italic;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.homepage-box {
+  position: absolute;
+
+  width: 50vw;
+  height: 50vh;
+  overflow: hidden;
+}
+
+.homepage-topleft-info {
+  background-color: var(--info-color);
+
+}
+
+.homepage-topright-writing {
+  background-color: var(--writing-color);
+  color: var(--white-sub);
+
+}
+
+.homepage-bottomleft-curating {
+  background-color: var(--curating-color);
+  color: var(--white-sub);
+
+}
+
+.homepage-bottomright-studio {
+  background-color: var(--studio-color);
+  color: var(--black-sub);
+
+}
+
+h1 {
+  font-family: "sans";
+  text-transform: uppercase;
+  position: fixed;
+  padding: 20px;
+  font-size: 40px;
+  font-weight: normal;
+  position: absolute;
+}
+
+span.bio {
+  font-family: "serif";
+  text-transform: none;
+}
+
+.homepage-topleft-info, .homepage-topleft-info h1 {
+  top: 0;
+  left: 0;
+  padding-top: 0;
+}
+
+.homepage-topleft-info {
+  overflow: scroll;
+}
+.homepage-topleft-info h1 {
+  width: 60vw;
+  line-height: 45px;
+
+
+}
+
+.homepage-bottomright-studio, .homepage-bottomright-studio h1 {
+  bottom: 0;
+  right: 0;
+  padding-bottom: 0;
+
+}
+
+.homepage-bottomleft-curating, .homepage-bottomleft-curating h1 {
+  bottom: 0;
+  left:0;
+  padding-bottom: 0;
+
+}
+
+.homepage-topright-writing, .homepage-topright-writing h1 {
+  top: 0;
+  right:0;
+  padding-top: 0;
+
+}
