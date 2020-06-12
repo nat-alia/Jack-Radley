@@ -8,26 +8,40 @@ $( document ).ready(function() {
     const studioBox = document.querySelector('div.homepage-bottomright-studio')
 
 
-    $( document ).mousemove(function(event){
-      var coorX = event.pageX;
-      var coorY = event.pageY;
-      var width = $(window).width();
-      var height = $(window).height();
+    var cursorMoves = true;
+    var width = $(window).width();
+    var height = $(window).height();
 
-      bioBox.style.width = coorX + "px"
-      bioBox.style.height = coorY + "px"
+    if (cursorMoves) {
+      $( document ).mousemove(function(event){
+        var coorX = event.pageX;
+        var coorY = event.pageY;
 
-      curatingBox.style.width = coorX + "px"
-      curatingBox.style.height = height - coorY + "px"
+        if (cursorMoves) {
+          bioBox.style.width = coorX + "px"
+          bioBox.style.height = coorY + "px"
 
-      writingBox.style.width = width - coorX + "px"
-      writingBox.style.height = coorY + "px"
+          curatingBox.style.width = coorX + "px"
+          curatingBox.style.height = height - coorY + "px"
 
-      studioBox.style.width = width - coorX + "px"
-      studioBox.style.height = height - coorY + "px"
+          writingBox.style.width = width - coorX + "px"
+          writingBox.style.height = coorY + "px"
+
+          studioBox.style.width = width - coorX + "px"
+          studioBox.style.height = height - coorY + "px"
+        }
+
+        $(document).click(function(){
+          cursorMoves = !cursorMoves;
+          })
+
+      });
+    };
 
 
-    });
+
+
+
 
 
 

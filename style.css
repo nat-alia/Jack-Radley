@@ -50,18 +50,22 @@ body {
 .homepage-topright-writing {
   background-color: var(--writing-color);
   color: var(--white-sub);
+  pointer-events: none;
 
 }
 
 .homepage-bottomleft-curating {
   background-color: var(--curating-color);
   color: var(--white-sub);
+  pointer-events: none;
 
 }
 
 .homepage-bottomright-studio {
   background-color: var(--studio-color);
   color: var(--black-sub);
+  pointer-events: none;
+
 
 }
 
