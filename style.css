@@ -50,21 +50,17 @@ body {
 .homepage-topright-writing {
   background-color: var(--writing-color);
   color: var(--white-sub);
-  pointer-events: none;
 
 }
 
 .homepage-bottomleft-curating {
   background-color: var(--curating-color);
   color: var(--white-sub);
-  pointer-events: none;
-
 }
 
 .homepage-bottomright-studio {
   background-color: var(--studio-color);
   color: var(--black-sub);
-  pointer-events: none;
 
 
 }
@@ -79,9 +75,16 @@ h1 {
   position: absolute;
 }
 
+.caption{
+  font-family: "sans";
+  font-size: 14px;
+  line-height: 14px;
+}
+
 span.bio {
   font-family: "serif";
   text-transform: none;
+  cursor: default;
 }
 
 .homepage-topleft-info, .homepage-topleft-info h1 {
