@@ -37,11 +37,12 @@ $( document ).ready(function() {
           $("*").css("cursor", "pointer");
 
 
-          $(document).click(function(){
+          if (cursorMoves) {$(document).click(function(){
             cursorMoves = false;
             storedCoorX = coorX;
             storedCoorY = coorY;
           });
+        };
         };
 
 
@@ -65,17 +66,17 @@ $( document ).ready(function() {
               $(document).click(function(){
                 if(storedCoorX - 25 < event.pageX && storedCoorX + 25 > event.pageX && storedCoorY - 25 < event.pageY && storedCoorY + 25 > event.pageY){
                   cursorMoves = true;
+                }else{
+                  cursorMoves = false;
                 };
             });
           };
 
-         $('h1').hover(function(){
-            $("*").css("cursor", "pointer");
-          });
-
         };
       });
 
-
+      $('.heading').hover(function(){
+         $("*").css("cursor", "pointer");
+       });
 
 });

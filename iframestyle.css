@@ -1,0 +1,41 @@
+.curating-index {
+  background-color: var(--curating-color);
+  color: var(--white-sub);
+
+
+}
+
+.writing-index {
+  background-color: var(--writing-color);
+  color: var(--white-sub);
+
+
+}
+
+.studio-index {
+  background-color: var(--studio-color);
+  color: var(--black-sub);
+}
+
+.writing-section {
+  text-align: center;
+  width: 500px;
+  margin-left: 50%;
+  transform: translate(-50%, 0%);
+  padding-top: 100px;
+}
+
+
+h3.title {
+  font-family: "serif";
+  font-size: 25px;
+  font-weight: normal;
+}
+
+h3.title + h5 {
+  margin-top: -20px;
+}
+
+h4.category-label {
+  text-transform: uppercase;
+}

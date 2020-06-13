@@ -21,6 +21,9 @@
   src: url('fonts/Authentic/AUTHENTICSans-130.woff2') format('woff2'), /* Super Modern Browsers */
        url('fonts/Authentic/AUTHENTICSans-130.woff') format('woff'); /* Pretty Modern Browsers */
 }
+* {
+  font-weight: normal;
+}
 
 i{
   font-family: freight-text-pro, serif;
@@ -73,6 +76,7 @@ h1 {
   font-size: 40px;
   font-weight: normal;
   position: absolute;
+  z-index: 100;
 }
 
 .caption{
@@ -106,8 +110,15 @@ span.bio {
 .homepage-bottomright-studio, .homepage-bottomright-studio h1 {
   bottom: 0;
   right: 0;
-  padding-bottom: 0;
 
+}
+
+.homepage-bottomright-studio h1 {
+  margin-bottom: -20px;
+}
+
+.homepage-bottomleft-curating h1 {
+  margin-bottom: 0px;
 }
 
 .homepage-bottomleft-curating, .homepage-bottomleft-curating h1 {
@@ -117,9 +128,22 @@ span.bio {
 
 }
 
+
 .homepage-topright-writing, .homepage-topright-writing h1 {
   top: 0;
   right:0;
   padding-top: 0;
 
+}
+
+.homepage-box iframe {
+  position: relative;
+  width: inherit;
+  height: inherit;
+
+  width: 100vw;
+  height: inherit;
+  pointer-events: none;
+  outline: none;
+  border: none;
 }
