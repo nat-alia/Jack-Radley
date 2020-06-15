@@ -1,3 +1,5 @@
+var cursorMoves = true;
+
 $( document ).ready(function() {
     console.log( "ready!" );
 
@@ -9,7 +11,6 @@ $( document ).ready(function() {
 
 
 
-    var cursorMoves = true;
     var width = $(window).width();
     var height = $(window).height();
     var coorX;
@@ -18,36 +19,36 @@ $( document ).ready(function() {
     var storedCoorY;
 
 
-    $(document).mousemove(function(event){
-        coorX = event.pageX;
-        coorY = event.pageY;
+   $(document).mousemove(function(event){
 
         if (cursorMoves) {
-          bioBox.style.width = coorX + "px"
-          bioBox.style.height = coorY + "px"
 
-          curatingBox.style.width = coorX + "px"
-          curatingBox.style.height = height - coorY + "px"
+          coorX = event.pageX;
+          coorY = event.pageY;
 
-          writingBox.style.width = width - coorX + "px"
-          writingBox.style.height = coorY + "px"
+          bioBox.style.width = coorX + "px";
+          bioBox.style.height = coorY + "px";
 
-          studioBox.style.width = width - coorX + "px"
-          studioBox.style.height = height - coorY + "px"
+          curatingBox.style.width = coorX + "px";
+          curatingBox.style.height = height - coorY + "px";
+
+          writingBox.style.width = width - coorX + "px";
+          writingBox.style.height = coorY + "px";
+
+          studioBox.style.width = width - coorX + "px";
+          studioBox.style.height = height - coorY + "px";
+
           $("*").css("cursor", "pointer");
 
-
-          if (cursorMoves) {$(document).click(function(){
+          $(document).click(function(){
             cursorMoves = false;
-            storedCoorX = coorX;
-            storedCoorY = coorY;
           });
         };
-        };
-
 
 
         if(!cursorMoves){
+          storedCoorX = coorX;
+          storedCoorY = coorY;
 
           if(storedCoorX - 25 < event.pageX && storedCoorX + 25 > event.pageX && storedCoorY - 25 < event.pageY && storedCoorY + 25 > event.pageY){
               $("*").css("cursor", "pointer");
@@ -55,14 +56,8 @@ $( document ).ready(function() {
               $("*").css("cursor", "default");
           };
 
-          // $(document).click(function(){
-          //   if(storedCoorX - 15 < event.pageX && storedCoorX + 15 > event.pageX && storedCoorY - 15 < event.pageY && storedCoorY + 15 > event.pageY){
-          //     cursorMoves = true;
-          //   };
-          // });
 
-
-          if(storedCoorX - 25 < event.pageX && storedCoorX + 25 > event.pageX && storedCoorY - 25 < event.pageY && storedCoorY + 25 > event.pageY){
+        if(storedCoorX - 25 < event.pageX && storedCoorX + 25 > event.pageX && storedCoorY - 25 < event.pageY && storedCoorY + 25 > event.pageY){
               $(document).click(function(){
                 if(storedCoorX - 25 < event.pageX && storedCoorX + 25 > event.pageX && storedCoorY - 25 < event.pageY && storedCoorY + 25 > event.pageY){
                   cursorMoves = true;
@@ -71,6 +66,7 @@ $( document ).ready(function() {
                 };
             });
           };
+
 
         };
       });
