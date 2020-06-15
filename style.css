@@ -43,6 +43,7 @@ body {
   width: 50vw;
   height: 50vh;
   overflow: hidden;
+  overflow-x:hidden;
 }
 
 .homepage-topleft-info {
