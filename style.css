@@ -1,3 +1,6 @@
+
+/**COLORS**/
+
 :root {
   --info-color: #F1EFF4;
   --writing-color: #2B6AC0;
@@ -8,6 +11,8 @@
   --black-sub: #242021;
 }
 
+
+/**TYPEFACES **/
 
 @font-face {
   font-family: "serif";
@@ -21,10 +26,16 @@
   src: url('fonts/Authentic/AUTHENTICSans-130.woff2') format('woff2'), /* Super Modern Browsers */
        url('fonts/Authentic/AUTHENTICSans-130.woff') format('woff'); /* Pretty Modern Browsers */
 }
+
+#main {
+  pointer-events: none;
+}
+
 * {
   font-weight: normal;
 }
 
+/**Italic**/
 i{
   font-family: freight-text-pro, serif;
   font-weight: 400;
@@ -37,48 +48,69 @@ body {
   margin: 0;
 }
 
-.homepage-box {
-  position: absolute;
 
-  width: 50vw;
-  height: 50vh;
-  overflow: hidden;
-  overflow-x:hidden;
+
+.homepage-box {
+  position: fixed;
+
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .homepage-topleft-info {
   background-color: var(--info-color);
+  width: calc(100vw - 325px);
+  height: calc(100vh - 175px);
 
 }
 
 .homepage-topright-writing {
   background-color: var(--writing-color);
   color: var(--white-sub);
+  width: 325px;
+  height: calc(100vh - 175px);
 
 }
 
 .homepage-bottomleft-curating {
   background-color: var(--curating-color);
   color: var(--white-sub);
+  width: calc(100vw - 325px);
+  height: 175px;
 }
 
 .homepage-bottomright-studio {
   background-color: var(--studio-color);
   color: var(--black-sub);
-
-
+  width: 325px;
+  height: 175px;
 }
 
-h1 {
-  font-family: "sans";
-  text-transform: uppercase;
+
+.nav {
+  width: 100vw;
+  height: 100vh;
   position: fixed;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.nav .main-link {
+  pointer-events: all;
+}
+
+h1, .main-link {
+  font-family: "sans";
+  position: absolute;
+  text-transform: uppercase;
   padding: 20px;
   font-size: 40px;
   font-weight: normal;
-  position: absolute;
   z-index: 100;
 }
+
+
+/**CAPTION STYLE**/
 
 .caption{
   font-family: "sans";
@@ -86,71 +118,96 @@ h1 {
   line-height: 8px;
 }
 
+body {
+  background-color: var(--writing-color);
+}
+
+/**Delete Default Link Styles**/
+
 a {
   color: inherit;
   text-decoration: none;
 }
 
+
 span.bio {
   font-family: "serif";
   text-transform: none;
   cursor: default;
-}
+  position: absolute;
+  pointer-events: all;
+  overflow: scroll;
+  line-height: 1.25;
+  max-width: 60vw;
 
-.homepage-topleft-info, .homepage-topleft-info h1 {
-  top: 0;
-  left: 0;
-  padding-top: 0;
 }
 
 .homepage-topleft-info {
+  top: 0;
+  left: 0;
   overflow: scroll;
 }
+
+.jack-radley-link {
+  display: inline;
+}
+
 .homepage-topleft-info h1 {
   width: 60vw;
   line-height: 45px;
-
-
 }
 
-.homepage-bottomright-studio, .homepage-bottomright-studio h1 {
+.homepage-bottomright-studio, .studio-link {
   bottom: 0;
   right: 0;
-
 }
 
-.homepage-bottomright-studio h1 {
-  margin-bottom: -20px;
+.homepage-bottomright-studio a {
+  bottom: 0;
+  right: 0;
+  position: fixed;
 }
 
-.homepage-bottomleft-curating h1 {
-  margin-bottom: 0px;
-}
 
-.homepage-bottomleft-curating, .homepage-bottomleft-curating h1 {
+.homepage-bottomleft-curating, a.curating-link {
   bottom: 0;
   left:0;
-  padding-bottom: 0;
-
+  position: fixed;
+  color: var(--white-sub);
 }
 
+a.curating-link-tag {
+  position: fixed;
+}
 
-.homepage-topright-writing, .homepage-topright-writing h1 {
+.homepage-topright-writing, a.writing-link {
   top: 0;
   right:0;
-  padding-top: 0;
+  color: var(--white-sub);
 
 }
 
-.homepage-box iframe {
-  position: relative;
-  width: inherit;
-  height: inherit;
-  padding: 30px;
+.homepage-topright-writing a {
+  position: fixed;
+  right: 0;
+}
 
-  width: 100vw;
-  height: inherit;
-  /* pointer-events: none; */
-  outline: none;
-  border: none;
+a:hover {
+  transform: rotate(-1deg);
+}
+
+.hide {
+  display: none;
+}
+
+.showmore {
+  padding: 5px 0px;
+  border-bottom: 1px solid white;
+  /* border-radius: 50%; */
+
+}
+
+a:hover, a h3:hover {
+  cursor: pointer;
+  transform: rotate(-1deg);
 }

@@ -19,10 +19,10 @@
 
 .writing-section {
   text-align: center;
-  width: 550px;
+  width: 450px;
   margin-left: 50%;
   transform: translate(-50%, 0%);
-  padding-top: 100px;
+  padding-top: 60px;
 }
 
 .writing-article p {
@@ -45,4 +45,49 @@ h3.title + h5 {
 
 h4.category-label {
   text-transform: uppercase;
+}
+
+
+h5 {
+  margin-top: -15px;
+  margin-bottom: 50px;
+}
+
+span.publication {
+  font-family: freight-text-pro, serif;
+  font-weight: lighter;
+  font-size: 16px;
+  font-style: italic;
+}
+
+
+img.peek-img {
+  width: 45vw;
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -10;
+  pointer-events: none;
+}
+
+.piece:hover + img.peek-img {
+  visibility: visible;
+}
+
+.secondary-nav {
+  position: fixed;
+  right: -140px;
+  color: var(--white-sub);
+  text-transform: uppercase;
+  top: 245px;
+  transform: rotate(90deg);
+  pointer-events: none;
+}
+
+.secondary-nav a {
+  pointer-events: all;
+  padding-right: 20px;
+
 }
