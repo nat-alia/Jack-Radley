@@ -115,7 +115,10 @@ h1, .main-link {
 .caption{
   font-family: "sans";
   font-size: 12px;
-  line-height: 8px;
+  line-height: 18px;
+  display: inline-block;
+  text-align: left;
+  padding-top: 5px;
 }
 
 body {
@@ -210,4 +213,36 @@ a:hover {
 a:hover, a h3:hover {
   cursor: pointer;
   transform: rotate(-1deg);
+}
+
+.hero-piece {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 400px;
+}
+
+.secondary-nav {
+  position: fixed;
+  right: -168px;
+  color: var(--white-sub);
+  text-transform: uppercase;
+  top: 275px;
+  transform: rotate(90deg);
+  pointer-events: none;
+}
+
+
+.secondary-nav-home {
+  position: fixed;
+  right: 250px;
+  color: var(--black-sub);
+  text-transform: uppercase;
+  top: 300px;
+  /* transform: rotate(90deg); */
+  pointer-events: none;
+  z-index: 100;
+  font-size: 16px;
 }
