@@ -25,6 +25,23 @@
   padding-top: 60px;
 }
 
+.writing-all {
+  text-align: center;
+  width: 1000px;
+  margin-left: 50%;
+  transform: translate(-50%, 0%);
+  padding-top: 60px;
+}
+
+.writing-all a h3 {
+  font-size: 16px;
+
+}
+
+.writing-all h5 {
+  margin-bottom: 30px;
+}
+
 .writing-article p {
   text-align: left;
   font-family: "serif";
@@ -51,12 +68,13 @@ h4.category-label {
 h5 {
   margin-top: -15px;
   margin-bottom: 50px;
+  font-size: 16px;
 }
 
 .publication {
   font-family: freight-text-pro, serif;
   font-weight: lighter;
-  font-size: 16px;
+  font-size: 18px;
   font-style: italic;
 }
 
