@@ -2,11 +2,14 @@
 /**COLORS**/
 
 :root {
+
+  /**background colors of sections*/
   --info-color: #F1EFF4;
   --writing-color: #2B6AC0;
   --curating-color: #242021;
   --studio-color:#FBFBEF;
 
+  /** almost-white and almost-black colors **/
   --white-sub: #FBFBEF;
   --black-sub: #242021;
 }
@@ -27,20 +30,11 @@
        url('fonts/Authentic/AUTHENTICSans-130.woff') format('woff'); /* Pretty Modern Browsers */
 }
 
-#main {
-  pointer-events: none;
-}
+/**Delete Default Link Styles**/
 
-* {
-  font-weight: normal;
-}
-
-/**Italic**/
-i{
-  font-family: freight-text-pro, serif;
-  font-weight: 400;
-  font-size: 48px;
-  font-style: italic;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 body {
@@ -49,6 +43,27 @@ body {
 }
 
 
+#main {
+  pointer-events: none;
+}
+
+* {
+  font-weight: normal;
+  font-family: "authentic";
+  /* letter-spacing: 1px; */
+}
+
+/**Italic**/
+i{
+  font-family: freight-text-pro, serif;
+  font-weight: 400;
+  font-size: 43px;
+  font-style: italic;
+}
+
+
+
+/**homepage boxes **/
 
 .homepage-box {
   position: fixed;
@@ -95,6 +110,7 @@ body {
   z-index: 100;
 }
 
+
 .nav .main-link {
   pointer-events: all;
 }
@@ -104,7 +120,7 @@ h1, .main-link {
   position: absolute;
   text-transform: uppercase;
   padding: 20px;
-  font-size: 40px;
+  font-size: 38px;
   font-weight: normal;
   z-index: 100;
 }
@@ -118,19 +134,14 @@ h1, .main-link {
   line-height: 18px;
   display: inline-block;
   text-align: left;
-  padding-top: 5px;
+  margin-top: 20px;
 }
 
 body {
   background-color: var(--writing-color);
 }
 
-/**Delete Default Link Styles**/
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
 
 
 span.bio {
@@ -139,11 +150,13 @@ span.bio {
   cursor: default;
   position: absolute;
   pointer-events: all;
-  overflow: scroll;
-  line-height: 1.25;
+  /* overflow: scroll; */
+  line-height: 50px;
   max-width: 60vw;
 
 }
+
+/**Links*/
 
 .homepage-topleft-info {
   top: 0;
@@ -196,12 +209,16 @@ a.curating-link-tag {
 }
 
 a:hover {
-  transform: rotate(-1deg);
+  /* transform: rotate(-1deg); */
 }
+
+/*hide class*/
 
 .hide {
   display: none;
 }
+
+/*showmore class*/
 
 .showmore {
   padding: 0px 0px;
@@ -211,10 +228,14 @@ a:hover {
 
 }
 
+/*link effecs*/
+
 a:hover, a h3:hover {
   cursor: pointer;
-  transform: rotate(-1deg);
+  /* transform: rotate(-1deg); */
 }
+
+/*big image in project pages*/
 
 .hero-piece {
   position: absolute;
@@ -225,28 +246,57 @@ a:hover, a h3:hover {
   width: 400px;
 }
 
+
+/*secondary name on home page and project pages*/
+
 .secondary-nav {
   position: fixed;
-  right: -168px;
   color: var(--white-sub);
-  text-transform: uppercase;
-  top: 275px;
+  /* text-transform: uppercase; */
   transform: rotate(90deg);
-  pointer-events: none;
+  font-size: 16px;
+  z-index: 100;
+  width: 550px;
+  text-transform: uppercase;
+
+
+
+  /* ointer-events: none; */
+
+  padding: 0;
+  margin: 0;
+
+  top: 60vh;
+  left: 78vw;
+
+
 }
 
 
 .secondary-nav-home {
-  position: fixed;
-  right: 250px;
   color: var(--black-sub);
-  text-transform: uppercase;
-  top: 300px;
-  /* transform: rotate(90deg); */
-  pointer-events: none;
-  z-index: 100;
   font-size: 16px;
+  z-index: 100;
+  text-transform: uppercase;
+
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+
+  top: 50%;
+  margin-left: 100%;
+  transform: rotate(90deg);
+  width: 250px;
+
 }
+
+.secondary-nav-home a,.secondary-nav a  {
+  pointer-events: all;
+  padding-right: 16px;
+  font-size: 14px;
+}
+
+
+
 
 .article-img {
   padding-top: 100px;
@@ -263,6 +313,214 @@ a:hover, a h3:hover {
 
 .back-btn {
   text-align: center;
-  font-size: 40px;
+  font-size: 230px;
   padding: 100px;
+  padding-top: 0;
+   padding-bottom: 0;
+   margin-bottom: 0;
+  line-height: 0;
+}
+
+.writing-all-chrono {
+    text-align: left;
+
+}
+
+.curating-index {
+  background-color: var(--curating-color);
+  color: var(--white-sub);
+
+
+}
+
+.writing-index {
+  background-color: var(--writing-color);
+  color: var(--white-sub);
+
+
+}
+
+.studio-index {
+  background-color: var(--studio-color);
+  color: var(--black-sub);
+}
+
+.writing-section {
+  text-align: center;
+  width: 500px;
+  margin-left: 50%;
+  transform: translate(-50%, 0%);
+  padding-top: 60px;
+}
+
+.writing-all {
+  width: 1000px;
+  transform: translate(50%, 0);
+  /* padding-left: 50%; */
+  padding-top: 60px;
+
+}
+
+.writing-all-center {
+  text-align: center;
+}
+
+.writing-all-left {
+  text-align: left;
+}
+
+.writing-all a h3 {
+  font-size: 16px;
+
+}
+
+.writing-all h5 {
+  margin-bottom: 30px;
+}
+
+.piece h5 {
+  padding-top: 5px;
+  padding-bottom:25px;
+}
+
+.writing-article p {
+  text-align: left;
+  font-family: "serif";
+  font-weight: normal;
+  line-height: 1.6;
+}
+
+h3.title {
+  font-family: "serif";
+  font-size: 25px;
+  font-weight: normal;
+}
+
+h3.title + h5 {
+  margin-top: -20px;
+}
+
+h4.category-label {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1.2;
+}
+
+
+h5 {
+  margin-top: -15px;
+  margin-bottom: 50px;
+  font-size: 15px;
+}
+
+.publication {
+  font-family: freight-text-pro, serif;
+  font-weight: lighter;
+  font-size: 18px;
+  font-style: italic;
+}
+
+
+.peek-img {
+  width: 45vw;
+  visibility: hidden;
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* .piece:hover + img.peek-img */
+
+
+
+
+
+.article-container {
+  width: 675px;
+  overflow-y: hidden; /* Hide vertical scrollbar */
+
+  /* transform: translate(-17%, 0%); */
+
+}
+
+.article-container::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+.article-img {
+  width: auto;
+  height: 30vw;
+  max-width: 600px;
+  margin-right: 20px;
+}
+
+.article-image {
+  width: 40vw;
+  height: auto;
+  text-align: left;
+}
+
+.img-ca {
+  margin-left: 20px;
+
+}
+
+.hero-image {
+  width: 100vw;
+  height: 100vh;
+}
+
+.sticky {
+  position: sticky:absolute;
+  top: 50vh;
+}
+
+
+.image-gallery {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  overflow: scroll;
+}
+
+
+.bio-img-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.bio-img-mark {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 25px;
+  right: 165px;
+}
+
+.bio-img-text {
+  position: absolute;
+
+  font-size: 6vw;
+  line-height: 6vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 100;
+  visibility: hidden;
+  text-align: center;
+
+}
+
+.visible-img{
+  visibility: visible;
+}
+
+.speaker {
+  text-transform: uppercase;
 }
